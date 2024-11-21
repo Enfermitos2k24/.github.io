@@ -1,0 +1,293 @@
+/* Estilo general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    text-align: center;
+    height: 150vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-image: url('fondo.jpg'); /* Fondo con la imagen */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Cabecera */
+.header {
+    padding: 20px;
+    background-color: rgba(26, 26, 26, 0.9); /* Fondo oscuro semi-transparente */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    margin-bottom: 40px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Coloca el logo y el texto en columna */
+    text-align: center;
+}
+
+/* Ajustes para el logo */
+.logo h1 {
+    color: #00d9ff;
+    font-size: 36px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-family: 'Orbitron', sans-serif;
+    margin-bottom: 10px;
+}
+
+/* Sección de perfil */
+.profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.avatar-container {
+    border: 4px solid #a7a7a7; /* He ajustado el color del borde */
+    padding: 6px;
+    border-radius: 50%; /* Usar 50% para que quede perfectamente circular */
+    margin-right: 30px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5); /* Hacer el shadow visible */
+}
+
+.avatar {
+    width: 100px;
+    height: 100px; /* Corregí la altura para un tamaño adecuado */
+    border-radius: 50%; /* Asegura que la imagen sea circular */
+    border: 3px solid #3d5dc5;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.avatar:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.8);
+}
+
+.profile-info h2 {
+    color: #ffffff;
+    font-size: 40px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    text-shadow: 3px 3px 5px rgba(0, 204, 255, 0.8);
+}
+
+.gamertag {
+    color: #ffffff;
+    font-size: 18px;
+    text-transform: uppercase;
+    text-shadow: 3px 3px 5px rgba(0, 204, 255, 0.8);
+    letter-spacing: 2px;
+    animation: blink 1s infinite alternate;
+    
+}
+
+/* Galería de imágenes */
+.gallery {
+    margin-bottom: 60px;
+}
+
+.gallery h3 {
+    color: #ffffff;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.game-photo {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(41, 75, 187, 0.6);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.game-photo:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgb(33, 64, 206);
+}
+
+/* Enlaces */
+.links {
+    margin-bottom: 60px;
+}
+
+.links h3 {
+    color: #00ff00;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.link-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.link-btn {
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: inline-block;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.link-btn:hover {
+    transform: scale(1.1);
+}
+
+.twitch {
+    background-color: #ff8800;
+    color: #fff;
+}
+
+.instagram {
+    background-color: #ff0000;
+    color: #fff;    
+}
+
+.youtube {
+    background-color: #461818;
+    color: #fff;
+}
+
+.link-btn:hover {
+    background-color: #fff;
+    color: #121212;
+}
+
+/* Pie de página */
+.footer {
+    background-color: rgba(26, 26, 26, 0.9);
+    padding: 20px;
+    margin-top: 40px;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+.footer p {
+    color: #aaa;
+    font-size: 14px;
+}
+
+/* Medias Queries para Responsividad */
+
+/* Para pantallas de 768px o menos (tablets y dispositivos medianos) */
+@media screen and (max-width: 768px) {
+    .header {
+        padding: 15px;
+        flex-direction: column; /* Centra los elementos en columna */
+    }
+
+    .logo h1 {
+        font-size: 30px; /* Reduce el tamaño del logo */
+        margin-bottom: 10px;
+    }
+
+    .avatar {
+        width: 150px;
+        height: 150px;
+    }
+
+    .profile-info h2 {
+        font-size: 28px;
+    }
+
+    .gamertag {
+        font-size: 16px;
+    }
+
+    .photo-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .game-photo {
+        height: 300px;
+    }
+
+    .link-btn {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+
+    .footer p {
+        font-size: 12px;
+    }
+}
+
+/* Para pantallas de 480px o menos (móviles) */
+@media screen and (max-width: 480px) {
+    /* Ajustar el tamaño de la cabecera y el logo */
+    .header {
+        padding: 10px;
+        flex-direction: column; /* Centra los elementos en columna */
+    }
+
+    .logo h1 {
+        font-size: 24px; /* Reduce aún más el tamaño del logo */
+        margin-bottom: 5px;
+    }
+
+    /* Ajuste del avatar */
+    .avatar {
+        width: 120px;
+        height: 120px;
+        margin: 0 0 15px 0; /* Asegura que no sobresalga */
+    }
+
+    .profile-info h2 {
+        font-size: 24px;
+    }
+
+    .gamertag {
+        font-size: 14px;
+    }
+
+    /* Hacer que la galería se vea correctamente en móviles */
+    .photo-grid {
+        grid-template-columns: 1fr; /* Mostrar 1 columna */
+    }
+
+    .game-photo {
+        height: 250px; /* Reducir el tamaño de las fotos */
+    }
+
+    .link-btn {
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+
+    .footer p {
+        font-size: 10px;
+    }
+}
+/* asfsafafsafsadsa */
